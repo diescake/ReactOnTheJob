@@ -26,7 +26,7 @@ describe('GitHub API handlers', () => {
 
     it('should fail with nonexistent name', async () => {
       const companyName = 'facebook';
-      mock.onGet(`/${companyName}/members`).reply(
+      mock.onGet(`/orgs/${companyName}/members`).reply(
         404,
         JSON.parse(`
           {
